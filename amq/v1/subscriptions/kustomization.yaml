@@ -1,0 +1,4 @@
+namespace: ramen-amq
+resources:
+- channel.yaml
+- namespace.yaml

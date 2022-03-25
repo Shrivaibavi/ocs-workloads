@@ -1,0 +1,6 @@
+namespace: amq-workloads
+resources:
+- namespace.yaml
+- placementrule.yaml
+- subscription.yaml
+- drpc.yaml
