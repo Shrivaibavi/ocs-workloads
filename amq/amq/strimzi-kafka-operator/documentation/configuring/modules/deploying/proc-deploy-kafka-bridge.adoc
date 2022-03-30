@@ -1,0 +1,42 @@
+// Module included in the following assemblies:
+//
+// deploying/assembly_deploy-kafka-bridge.adoc
+
+[id='deploying-kafka-bridge-{context}']
+= Deploying Kafka Bridge to your Kubernetes cluster
+
+[role="_abstract"]
+This procedure shows how to deploy a Kafka Bridge cluster to your Kubernetes cluster using the Cluster Operator.
+
+The deployment uses a YAML file to provide the specification to create a `KafkaBridge` resource.
+
+Strimzi provides xref:deploy-examples-{context}[example configuration files].
+In this procedure, we use the following example file:
+
+* `examples/bridge/kafka-bridge.yaml`
+
+.Prerequisites
+
+* xref:deploying-cluster-operator-str[The Cluster Operator must be deployed.]
+
+.Procedure
+
+. Deploy Kafka Bridge to your Kubernetes cluster:
++
+[source,shell,subs="attributes+"]
+----
+kubectl apply -f examples/bridge/kafka-bridge.yaml
+----
+
+. Verify that Kafka Bridge was successfully deployed:
++
+[source,shell,subs="attributes+"]
+----
+kubectl get deployments
+----
+
+[role="_additional-resources"]
+.Additional resources
+
+* link:{BookURLUsing}#assembly-config-kafka-bridge-str[Kafka Bridge cluster configuration^]
+* link:{BookURLBridge}[Using the Strimzi Kafka Bridge^]

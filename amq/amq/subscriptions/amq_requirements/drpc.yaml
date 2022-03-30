@@ -1,0 +1,17 @@
+---
+apiVersion: ramendr.openshift.io/v1alpha1
+kind: DRPlacementControl
+metadata:
+  name: amq-drpc
+  labels:
+    app: amq-sample
+spec:
+  preferredCluster: "sraghave-m1"
+  drPolicyRef:
+    name: odr-policy-east-west-rpo-5m
+  placementRef:
+    kind: PlacementRule
+    name: amq-placement
+  pvcSelector:
+    matchLabels:
+      appname: amq
